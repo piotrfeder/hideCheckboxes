@@ -1,0 +1,85 @@
+﻿<!doctype html>
+
+<html lang="pl">
+<head>
+  <meta charset="utf-8">
+
+  <title>ShowPass.js - jQuery plugin do podglądu hasła</title>
+  <meta name="description" content="showPass.js to prosty plugin, dzięki któremu można dać użytkownikowi możliwość podejrzenia hasła w formularzu.">
+  <meta name="author" content="Piotr Feder">
+
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.2/jquery.min.js"></script>
+<script src="hideCheckboxes.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
+<link href='https://fonts.googleapis.com/css?family=Oswald:400,300,700&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<style>
+* {box-sizing: border-box;}
+body {background: #f4f4f4; font-family: 'Oswald', sans-serif; font-weight: 100;}
+
+input {background: #fff; border: 1px solid #eee; line-height: 40px; color: #595959; padding: 0 0 0 10px; font-size: 16px; font-weight: 100;}
+
+.show_pass, .show_mulitply_pass {
+    background: #7cb342 none repeat scroll 0 0;
+    border: 2px solid #7cb342;
+    color: #fff;
+    font-size: 16px;
+    line-height: 34px;
+	transition: all .4s ease-in-out;
+	cursor: pointer;
+}
+
+.show_pass:hover, .show_mulitply_pass:hover {background:transparent; transition: all .4s ease-in-out; color: #595959;}
+
+h1, h6 {text-align:center;}
+h1 {color: #d81b60; font-size: 40px;}
+h6 {font-size: 22px; font-weight: 100; color: #565656;}
+</style>
+
+
+
+<script>
+$(document).ready(function() {
+
+$( ".checkbox" ).click(function() {
+	
+		$(this).countChecked(2);
+	
+});
+
+});
+
+</script>
+
+  <!--[if lt IE 9]>
+  <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+  <![endif]-->
+</head>
+
+<body>
+
+
+
+
+
+
+
+<h1>ShowPass.js - Demo</h1>
+<h6>Prosty plugin do podglądu hasła w formularzach.</h6>
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<div class="checkbox">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+<input type="checkbox" id="pass" name="pass" value="test">
+</div>
+<button class="show_mulitply_pass"><i class="fa fa-eye"></i> Show Multiply Pass</button>
+
+</body>
+</html>
